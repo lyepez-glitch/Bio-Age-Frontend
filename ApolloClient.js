@@ -1,12 +1,12 @@
 import { ApolloClient, InMemoryCache, HttpLink, ApolloLink } from '@apollo/client';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { setContext } from '@apollo/client/link/context'; // Used to set headers
-import { RENDER_URL } from '@env';
-
+// import { RENDER_URL } from '@env';
+const renderUrl = process.env.RENDER_URL;
 // Refresh token function (make sure you implement it in your backend)
 const refreshToken = async(refreshToken) => {
     try {
-        const response = await fetch(`${RENDER_URL}/refresh-token`, {
+        const response = await fetch(`${renderUrl}/refresh-token`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ refreshToken })
@@ -64,7 +64,7 @@ const errorLink = new ApolloLink((operation, forward) => {
 
 // Apollo Client setup
 const createApolloClient = async() => {
-    const link = ApolloLink.from([authLink, errorLink, new HttpLink({ uri: `https://${RENDER_URL}/api/graphql/` })]);
+    const link = ApolloLink.from([authLink, errorLink, new HttpLink({ uri: `https://${renderUrl}/api/graphql/` })]);
 
     return new ApolloClient({
         link,

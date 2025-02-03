@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+const renderUrl = process.env.RENDER_URL;
 
 export default function BiologicalAgeScreen({ navigation }) {
   const [biologicalAge, setBiologicalAge] = useState(null);
-  import { RENDER_URL } from '@env';
+
 
   useEffect(() => {
     const fetchBiologicalAge = async () => {
@@ -15,7 +16,7 @@ export default function BiologicalAgeScreen({ navigation }) {
 
         if (token) {
           // Make the fetch request with the token
-          const response = await fetch(`${RENDER_URL}/api/biological-age/`, {
+          const response = await fetch(`${renderUrl}/api/biological-age/`, {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${token}`,

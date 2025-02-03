@@ -10,7 +10,7 @@ import {
 import { Button, TextInput, Text } from 'react-native-paper'; // Use components from react-native-paper
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
-import { RENDER_URL } from '@env';
+const renderUrl = process.env.RENDER_URL;
 
 const UPDATE_HEALTH_METRICS = gql`
   mutation UpdateHealthMetrics(

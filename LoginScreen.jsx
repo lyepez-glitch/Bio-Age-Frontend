@@ -3,7 +3,7 @@ import { View, Button, Text, StyleSheet } from 'react-native';
 import { TextInput as PaperInput } from 'react-native-paper';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { RENDER_URL } from '@env';
+const renderUrl = process.env.RENDER_URL;
 
 export default function LoginScreen({ navigation }) {
     const [username, setUsername] = useState('');
@@ -12,7 +12,7 @@ export default function LoginScreen({ navigation }) {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post(`${RENDER_URL}/api/token/`, {
+            const response = await axios.post(`${renderUrl}/api/token/`, {
                 username,
                 password,
             });

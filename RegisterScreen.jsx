@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import axios from 'axios';
-import { RENDER_URL } from '@env';
+const renderUrl = process.env.RENDER_URL;
 
 export default function RegisterScreen({ navigation }) {
   const [username, setUsername] = useState('');
@@ -13,7 +13,7 @@ export default function RegisterScreen({ navigation }) {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post(`${RENDER_URL}/api/register/`, {
+      const response = await axios.post(`${renderUrl}/api/register/`, {
         username,
         email,
         password,

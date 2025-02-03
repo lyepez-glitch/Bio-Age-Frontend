@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import { Card, ActivityIndicator } from 'react-native-paper';
-import { RENDER_URL } from '@env';
+const renderUrl = process.env.RENDER_URL;
 
 // Define the GraphQL query for recommendations
 const GET_RECOMMENDATIONS = gql`
