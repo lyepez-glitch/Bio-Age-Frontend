@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
-    width: '70%', // Adjust width to match the input fields
+    width: '70%', /// Adjust width to match the input fields
     alignSelf: 'center', // Center the button
   },
 });
