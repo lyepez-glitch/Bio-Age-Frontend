@@ -6,7 +6,7 @@ import { Card, ActivityIndicator } from 'react-native-paper';
 const renderUrl = Constants.expoConfig.extra.RENDER_URL;
 console.log('render url',renderUrl);
 
-/// Define the GraphQL query for recommendations
+///// Define the GraphQL query for recommendations
 const GET_RECOMMENDATIONS = gql`
   query GetRecommendations {
     recommendations {
