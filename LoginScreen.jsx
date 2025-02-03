@@ -3,6 +3,7 @@ import { View, Button, Text, StyleSheet } from 'react-native';
 import { TextInput as PaperInput } from 'react-native-paper';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from "expo-constants";
 const renderUrl = Constants.expoConfig.extra.RENDER_URL;
 console.log('render url',renderUrl);
 

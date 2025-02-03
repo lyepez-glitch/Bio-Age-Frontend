@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from "expo-constants";
 const renderUrl = Constants.expoConfig.extra.RENDER_URL;
 console.log('render url',renderUrl);
 

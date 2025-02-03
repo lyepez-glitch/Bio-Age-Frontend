@@ -1,6 +1,8 @@
 import { ApolloClient, InMemoryCache, HttpLink, ApolloLink } from '@apollo/client';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { setContext } from '@apollo/client/link/context'; // Used to set headers
+import { setContext } from '@apollo/client/link/context';
+import Constants from "expo-constants";
+// Used to set headers
 // import { RENDER_URL } from '@env';
 const renderUrl = Constants.expoConfig.extra.RENDER_URL;
 console.log('render url', renderUrl);

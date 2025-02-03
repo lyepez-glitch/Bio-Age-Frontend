@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from "expo-constants";
 
 export default function ProfileSetupScreen({ navigation }) {
   const [age, setAge] = useState('');

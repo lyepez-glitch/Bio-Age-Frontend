@@ -10,6 +10,7 @@ import {
 import { Button, TextInput, Text } from 'react-native-paper'; // Use components from react-native-paper
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import Constants from "expo-constants";
 const renderUrl = Constants.expoConfig.extra.RENDER_URL;
 console.log('render url',renderUrl);
 

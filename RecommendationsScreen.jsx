@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useQuery } from '@apollo/client';
+import Constants from "expo-constants";
 import gql from 'graphql-tag';
 import { Card, ActivityIndicator } from 'react-native-paper';
 const renderUrl = Constants.expoConfig.extra.RENDER_URL;
