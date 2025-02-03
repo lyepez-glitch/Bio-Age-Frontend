@@ -8,10 +8,11 @@ export default function ProfileSetupScreen({ navigation }) {
   const [age, setAge] = useState('');
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
-
+  const renderUrl = Constants.expoConfig.extra.RENDER_URL;
+  console.log('render url',renderUrl);
   const handleProfileSubmit = async () => {
     const token = await AsyncStorage.getItem("token");
-    fetch('https://bioage-companion.onrender.com/api/profile-setup/', {
+    fetch(`https://${renderUrl}/api/profile-setup/`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,

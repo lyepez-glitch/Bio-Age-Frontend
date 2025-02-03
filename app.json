@@ -29,7 +29,8 @@
         "extra": {
             "eas": {
                 "projectId": "3855e056-d5c2-459c-acb5-aeeeaf05385f"
-            }
+            },
+            "RENDER_URL": "https://bioage-companion.onrender.com"
         }
     }
 }

@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import axios from 'axios';
-const renderUrl = process.env.RENDER_URL;
+import Constants from "expo-constants";
+const renderUrl = Constants.expoConfig.extra.RENDER_URL;
+console.log('render url',renderUrl);
 
 export default function RegisterScreen({ navigation }) {
   const [username, setUsername] = useState('');

@@ -2,7 +2,8 @@ import { ApolloClient, InMemoryCache, HttpLink, ApolloLink } from '@apollo/clien
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { setContext } from '@apollo/client/link/context'; // Used to set headers
 // import { RENDER_URL } from '@env';
-const renderUrl = process.env.RENDER_URL;
+const renderUrl = Constants.expoConfig.extra.RENDER_URL;
+console.log('render url', renderUrl);
 // Refresh token function (make sure you implement it in your backend)
 const refreshToken = async(refreshToken) => {
     try {

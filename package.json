@@ -22,6 +22,7 @@
         "@types/react": "~18.3.12",
         "axios": "^1.7.9",
         "expo": "~52.0.24",
+        "expo-constants": "^17.0.5",
         "expo-status-bar": "~2.0.0",
         "graphql": "^16.10.0",
         "install": "^0.13.0",

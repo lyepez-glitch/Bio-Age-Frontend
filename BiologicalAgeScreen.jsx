@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const renderUrl = process.env.RENDER_URL;
+const renderUrl = Constants.expoConfig.extra.RENDER_URL;
+console.log('render url',renderUrl);
 
 export default function BiologicalAgeScreen({ navigation }) {
   const [biologicalAge, setBiologicalAge] = useState(null);

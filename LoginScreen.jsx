@@ -3,7 +3,8 @@ import { View, Button, Text, StyleSheet } from 'react-native';
 import { TextInput as PaperInput } from 'react-native-paper';
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-const renderUrl = process.env.RENDER_URL;
+const renderUrl = Constants.expoConfig.extra.RENDER_URL;
+console.log('render url',renderUrl);
 
 export default function LoginScreen({ navigation }) {
     const [username, setUsername] = useState('');
