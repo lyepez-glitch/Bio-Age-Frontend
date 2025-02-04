@@ -67,7 +67,7 @@ const errorLink = new ApolloLink((operation, forward) => {
 
 // Apollo Client setup
 const createApolloClient = async() => {
-    const link = ApolloLink.from([authLink, errorLink, new HttpLink({ uri: `https://${renderUrl}/api/graphql/` })]);
+    const link = ApolloLink.from([authLink, errorLink, new HttpLink({ uri: `${renderUrl}/api/graphql/` })]);
 
     return new ApolloClient({
         link,
