@@ -13,7 +13,7 @@ export default function ProfileSetupScreen({ navigation }) {
   console.log('render url',renderUrl);
   const handleProfileSubmit = async () => {
     const token = await AsyncStorage.getItem("token");
-    fetch(`https://${renderUrl}/api/profile-setup/`, {
+    fetch(`${renderUrl}/api/profile-setup/`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`,
